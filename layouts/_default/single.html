@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article class="max-w-4xl mx-auto px-6 py-14">
+  <header class="mb-10 pb-6 border-b border-og-border">
+    <div class="text-xs font-mono text-og-citrus mb-2">{{ .Section | upper }} · ORANGEGEL STUDIO</div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">{{ .Title }}</h1>
+    {{ with .Description }}
+      <p class="text-base text-og-muted mt-3">{{ . }}</p>
+    {{ end }}
+  </header>
+  <div class="citrus-glass rounded-2xl p-8 space-y-4 leading-relaxed text-og-text/90">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

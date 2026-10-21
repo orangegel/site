@@ -1,0 +1,12 @@
+{
+  "name": "OrangeGel Official Marketing & Demo Site",
+  "activeSsg": "hugo",
+  "preferredViewport": "desktop-1280",
+  "deploy": {
+    "firebaseProjectId": "jasonsmithio",
+    "hostingSite": "orangegel-site",
+    "publicDir": "public",
+    "cloudRunService": "orangegel-edge-api",
+    "cloudRunRegion": "us-central1"
+  }
+}

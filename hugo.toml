@@ -1,0 +1,46 @@
+baseURL = "https://orangegel.dev/"
+languageCode = "en-us"
+title = "OrangeGel — Modern Tauri v2 Static Site IDE & Multi-Device Preview Studio"
+enableRobotsTXT = true
+enableGitInfo = false
+
+[pagination]
+  pagerSize = 12
+
+[params]
+  tagline = "Tauri v2 · Top 20 Static Site Generators · Hugo Preferred"
+  description = "A native macOS & cross-platform Static Site IDE combining Monaco authoring, real-time multi-device responsive preview, 3D site topology, offline Hunspell + Local LLM proofreading, and one-click Firebase Hosting + Cloud Run deployment."
+  githubRepo = "https://github.com/orangegel/orangegel"
+  docsUrl = "https://docs.orangegel.dev"
+  preferredSsg = "Hugo"
+  palette = "Citrus Hydrogel Dark (#0C0D12 · #FF8A00 · #FFB800)"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "dracula"
+    lineNos = true
+
+[menu]
+  [[menu.main]]
+    name = "Features"
+    url = "/features/"
+    weight = 10
+  [[menu.main]]
+    name = "Device Preview"
+    url = "/features/multi-device-preview/"
+    weight = 20
+  [[menu.main]]
+    name = "Top 20 SSGs"
+    url = "/features/top-20-ssgs/"
+    weight = 30
+  [[menu.main]]
+    name = "Architecture"
+    url = "/posts/architecture-overview/"
+    weight = 40
+  [[menu.main]]
+    name = "Docs"
+    url = "https://github.com/orangegel/docs"
+    weight = 50
