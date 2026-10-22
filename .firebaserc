@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "jasonsmithio"
+  },
+  "targets": {
+    "jasonsmithio": {
+      "hosting": {
+        "site": [
+          "orangegel"
+        ]
+      }
+    }
+  }
+}

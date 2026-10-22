@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "orangegel-site",
+    "target": "site",
     "public": "public",
     "ignore": [
       "firebase.json",

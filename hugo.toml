@@ -1,6 +1,6 @@
 baseURL = "https://orangegel.dev/"
-languageCode = "en-us"
-title = "OrangeGel — Modern Tauri v2 Static Site IDE & Multi-Device Preview Studio"
+locale = "en-US"
+title = "OrangeGel — Native macOS Static Site Studio"
 enableRobotsTXT = true
 enableGitInfo = false
 

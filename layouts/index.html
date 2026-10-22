@@ -1,124 +1,76 @@
 {{ define "main" }}
-<section class="relative overflow-hidden py-20 lg:py-28 border-b border-og-border/60">
-  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
-    <div class="lg:col-span-7 space-y-6">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-og-panel border border-og-amber/40 text-xs font-mono text-og-citrus">
-        <span>★ HUGO PREFERRED</span>
-        <span>·</span>
-        <span>TOP 20 STATIC SITE GENERATORS</span>
-      </div>
-      <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight">
-        Craft Static Sites in a
-        <span class="bg-gradient-to-r from-og-amber via-og-citrus to-amber-200 bg-clip-text text-transparent">
-          Citrus-Gel Native Studio
-        </span>
+<div class="relative flex-1 flex flex-col items-center justify-between min-h-screen px-6 py-12 overflow-hidden">
+  <!-- Ambient Background Glow -->
+  <div class="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[28rem] h-[28rem] rounded-full bg-og-amber/15 blur-[110px]"></div>
+
+  <!-- Top Spacer -->
+  <div></div>
+
+  <!-- Centered Holder Content -->
+  <div class="relative z-10 max-w-xl w-full mx-auto flex flex-col items-center text-center space-y-6">
+    <!-- Droplet Icon -->
+    <div class="relative group">
+      <div class="absolute -inset-2 rounded-[2rem] bg-gradient-to-tr from-og-amber/35 to-og-citrus/25 blur-xl opacity-80 group-hover:opacity-100 transition duration-500"></div>
+      <img
+        src="/images/orangegel-icon-1024.png"
+        alt="OrangeGel App Icon"
+        width="128"
+        height="128"
+        fetchpriority="high"
+        class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-[1.75rem] shadow-2xl citrus-glow select-none"
+      />
+    </div>
+
+    <!-- Clean Badge -->
+    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-og-panel/90 border border-og-amber/35 text-xs font-mono text-og-citrus tracking-wide">
+      <span class="w-1.5 h-1.5 rounded-full bg-og-amber animate-pulse"></span>
+      <span>Beta · macOS Native Studio</span>
+    </div>
+
+    <!-- Title & Tagline -->
+    <div class="space-y-3">
+      <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-og-text">
+        OrangeGel
       </h1>
-      <p class="text-lg text-og-muted max-w-2xl leading-relaxed">
-        {{ .Site.Params.description }}
+      <p class="text-base sm:text-lg text-og-muted max-w-lg mx-auto leading-relaxed">
+        The native macOS Static Site Studio &amp; Multi-Device Preview Browser. Built for Hugo and the Top 20 Jamstack generators.
       </p>
-      <div class="flex flex-wrap items-center gap-4 pt-2">
-        <a href="/features/multi-device-preview/" class="px-5 py-3 rounded-xl bg-gradient-to-r from-og-amber to-og-citrus text-og-bg font-bold text-sm shadow-lg hover:brightness-110 transition">
-          Explore Multi-Device Preview Studio →
-        </a>
-        <a href="/features/top-20-ssgs/" class="px-5 py-3 rounded-xl citrus-glass text-og-text font-semibold text-sm hover:border-og-amber transition">
-          View Top 20 SSG Matrix
-        </a>
-      </div>
     </div>
 
-    <!-- Interactive Three.js Citrus Hydrogel Orb Stage -->
-    <div class="lg:col-span-5 flex flex-col items-center">
-      <div class="citrus-glass citrus-glow rounded-3xl p-6 w-full flex flex-col items-center border border-og-amber/30">
-        <canvas id="og-hero-orb" width="320" height="320" class="w-64 h-64"></canvas>
-        <div class="mt-4 text-center">
-          <div class="text-xs font-mono text-og-citrus">THREE.JS REACTIVE HYDROGEL SHADER</div>
-          <div class="text-[11px] text-og-muted mt-1">60fps WebGL TorusKnot · Citrus Specular Highlights</div>
-        </div>
-      </div>
+    <!-- Quick CLI Preview Pill -->
+    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-og-surface/90 border border-og-border text-sm font-mono text-og-text shadow-inner">
+      <span class="text-og-amber select-none">$</span>
+      <code>orangegel .</code>
     </div>
-  </div>
-</section>
 
-<section class="max-w-7xl mx-auto px-6 py-16">
-  <div class="grid md:grid-cols-3 gap-6">
-    <div class="citrus-glass rounded-2xl p-6 space-y-3 og-card">
-      <div class="text-xs font-mono text-og-amber">01 · MULTI-DEVICE PREVIEW STUDIO</div>
-      <h3 class="text-lg font-bold">Desktop, Tablet, Mobile & Split Matrix</h3>
-      <p class="text-sm text-og-muted">
-        Inspect your live dev server across iPhone 16 Pro, Pixel 9, iPad Pro, 1080p Desktop, or all three simultaneously in Split Matrix mode with synchronized route following.
-      </p>
-    </div>
-    <div class="citrus-glass rounded-2xl p-6 space-y-3 og-card">
-      <div class="text-xs font-mono text-og-citrus">02 · HUGO PREFERRED + TOP 20 SSGs</div>
-      <h3 class="text-lg font-bold">Zero-Config Adapter Engine</h3>
-      <p class="text-sm text-og-muted">
-        First-class Hugo support with automatic archetype scaffolding, TOML/YAML/JSON front-matter round-tripping, and 20 pre-wired SSG adapters with real-time port discovery.
-      </p>
-    </div>
-    <div class="citrus-glass rounded-2xl p-6 space-y-3 og-card">
-      <div class="text-xs font-mono text-og-emerald">03 · PROSE + LOCAL AI + DEPLOY</div>
-      <h3 class="text-lg font-bold">Offline Hunspell & Firebase Hosting</h3>
-      <p class="text-sm text-og-muted">
-        Deterministic style checks, offline Hunspell dictionary, Ollama/LM Studio side-by-side diffs with stale-buffer guard, and one-click Firebase Hosting + Cloud Run deploy.
-      </p>
+    <!-- Action Links -->
+    <div class="flex flex-wrap items-center justify-center gap-3.5 pt-2">
+      <a
+        href="https://github.com/orangegel/orangegel"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-og-amber to-og-citrus text-og-bg font-bold text-sm shadow-lg hover:brightness-110 transition"
+      >
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+        </svg>
+        <span>GitHub</span>
+      </a>
+      <a
+        href="https://github.com/orangegel/docs"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl citrus-glass text-og-text font-semibold text-sm hover:border-og-amber transition"
+      >
+        <span>Documentation</span>
+        <span class="text-og-amber">→</span>
+      </a>
     </div>
   </div>
 
-  <div class="mt-14 prose prose-invert max-w-none citrus-glass rounded-2xl p-8">
-    {{ .Content }}
-  </div>
-</section>
-
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const canvas = document.getElementById('og-hero-orb');
-    if (canvas && window.THREE) {
-      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-      renderer.setSize(320, 320);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 100);
-      camera.position.z = 4.2;
-
-      const geo = new THREE.TorusKnotGeometry(1.05, 0.34, 128, 32);
-      const mat = new THREE.MeshPhysicalMaterial({
-        color: 0xff8a00,
-        emissive: 0x3a1800,
-        roughness: 0.18,
-        metalness: 0.15,
-        clearcoat: 1.0,
-        clearcoatRoughness: 0.08
-      });
-      const mesh = new THREE.Mesh(geo, mat);
-      scene.add(mesh);
-
-      const keyLight = new THREE.PointLight(0xffb800, 2.4, 20);
-      keyLight.position.set(3, 3, 4);
-      scene.add(keyLight);
-
-      const rimLight = new THREE.PointLight(0x10b981, 1.4, 20);
-      rimLight.position.set(-3, -2, 3);
-      scene.add(rimLight);
-
-      function animate() {
-        requestAnimationFrame(animate);
-        mesh.rotation.x += 0.007;
-        mesh.rotation.y += 0.011;
-        renderer.render(scene, camera);
-      }
-      animate();
-    }
-
-    if (window.anime) {
-      anime({
-        targets: '.og-card',
-        translateY: [18, 0],
-        opacity: [0, 1],
-        delay: anime.stagger(110),
-        duration: 650,
-        easing: 'easeOutCubic'
-      });
-    }
-  });
-</script>
+  <!-- Minimal Footer -->
+  <footer class="relative z-10 pt-12 text-center text-xs text-og-muted/80">
+    © OrangeGel · Open Source under MIT
+  </footer>
+</div>
 {{ end }}
